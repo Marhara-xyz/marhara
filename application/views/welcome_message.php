@@ -11,7 +11,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, bitch!</h1>
+    <h1>Hello, gopan!</h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
