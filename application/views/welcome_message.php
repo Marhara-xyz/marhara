@@ -6,17 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="<?=base_url()?>/bootstrap/css/style.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/style.css">
 
-    <title>Hello, world!</title>
+    <title>Marhara</title>
   </head>
+  
   <body>
-    <h1>Hello, Firas! kita Lapar, Ayo Beli Nasi Uduk :)</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="margin-left: 4rem">
+            <img src="asset/image/Marhara.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-1 mb-lg-0" style="padding-left: 24%">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Discover</a>
+                </li>
+                
+              <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+          </ul>
+        </div>
+        </div>
+    </nav>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="<?=base_url()?>/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="asset/js/bootstrap.bundle.min.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
