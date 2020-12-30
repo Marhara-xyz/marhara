@@ -13,33 +13,46 @@
   </head>
   
   <body>
-    <div id="container" class="sticky-top" style="background-image: url(asset/image/header.png);">
-      <nav class="navbar navbar-expand-lg navbar-light" >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="margin-left: 4rem">
-            <img src="asset/image/Marhara.png" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <div id="container">
+      <div id="navbarku" style="background-image: url(asset/image/header.png);">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin-left: 4rem">
+              <img src="asset/image/Marhara.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">Discover</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Discover</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Profile</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div id="banner" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="asset/image/banner.jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="asset/image/banner2.jpg" alt="...">
+            </div>
           </div>
         </div>
-      </nav>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

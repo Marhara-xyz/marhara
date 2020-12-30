@@ -7,8 +7,15 @@
     width: 63%;
 	}
 }
-#container{
+#navbarku {
     background-size: 100%;
     background-repeat: no-repeat;
     height: 500px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+#banner {
+	position: absolute;
+	z-index: 1;
 }
