@@ -2,3 +2,13 @@
     padding-right: 2rem;
     padding-left: 2rem;
 }
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    width: 63%;
+	}
+}
+#container{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+}
