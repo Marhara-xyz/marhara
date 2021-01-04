@@ -15,6 +15,9 @@
     width: 100%;
     z-index: 2;
 }
+.navbarkui{
+    margin-left: 4rem;
+}
 #banner {
 	position: absolute;
 	z-index: 1;
