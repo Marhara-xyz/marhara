@@ -22,3 +22,9 @@
 	position: absolute;
 	z-index: 1;
 }
+.boy{
+    position: absolute;
+    background-color: #00f078;
+    transition: all 1s linear;
+    display: block;
+}
