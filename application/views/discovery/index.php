@@ -1,1 +1,0 @@
-<h3>discovery page<h3>

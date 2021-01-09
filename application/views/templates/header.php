@@ -18,9 +18,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="<?= base_url() ?>">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="<?= base_url() ?>discovery">Discovery</a>
-          <a class="nav-link" href="<?= base_url() ?>profile">Profile</a>
+          <a class="nav-link <?php if(basename($_SERVER['PHP_SELF'])=="index.php"){echo "active";}else{echo "";} ?>" href="<?= base_url()?>">Home </a>
+          <a class="nav-link <?php if(basename($_SERVER['PHP_SELF'])=="discovery"){echo "active";}else{echo "";} ?>"  href="<?= base_url()?>discovery">Discovery</a>
+          <a class="nav-link <?php if(basename($_SERVER['PHP_SELF'])=="profile"){echo "active";}else{echo "";} ?>" href="<?= base_url() ?>profile">Profile</a>
         </div>
       </div>
     </nav>

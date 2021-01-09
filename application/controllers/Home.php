@@ -1,11 +1,11 @@
 <?php
 
 class Home extends CI_Controller {
-    public function index($nama = '')
+    public function index()
     {
-        $data['nama'] = $nama;
+
         $this->load->view('templates/header');
-        $this->load->view('home/index');
+        $this->load->view('home/home');
         $this->load->view('templates/footer');
     }
 }
