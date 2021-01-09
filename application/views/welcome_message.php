@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Discover</a>
+                  <a class="nav-link" href="#">Discovery</a>
                 </li>
                 
                 <li class="nav-item">
