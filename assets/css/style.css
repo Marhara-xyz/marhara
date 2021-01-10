@@ -22,9 +22,10 @@
 	position: absolute;
 	z-index: 1;
 }
-.boy{
-    position: absolute;
-    background-color: #00f078;
-    transition: all 1s linear;
+.hlmn{
+    height: auto; 
+    position: relative; 
+    background-color: yellow; 
     display: block;
+    height: 640px;
 }

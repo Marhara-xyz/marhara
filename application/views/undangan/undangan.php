@@ -12,8 +12,31 @@
     <title>couple name</title>
   </head>
   <body>
-    <div class="boy">
-        <h1>halo halo bandung</h1>
+    <div id="container">
+        <div class="hlmn">
+            <div class="container">
+                <img src="<?= base_url()?>assets/image/bungaatas.png" >
+                <img src="<?= base_url()?>assets/image/bungakanan.png">
+                <img src="<?= base_url()?>assets/image/bungakiri.png">
+                <img class="bottom" src="<?= base_url()?>assets/image/bungabawah.png">
+            </div>
+        </div>
+
+        <div class="hlmn" style=" ">
+            <div class="konten">
+                <img src="<?= base_url()?>assets/image/bungaatas.png" style="display: block;margin: auto;">
+                <img src="<?= base_url()?>assets/image/bungakanan.png" style="position: absolute; right: 0; top: 149px;">
+                <img src="<?= base_url()?>assets/image/bungakiri.png" style="position:absolute;left: 0;bottom: 149px;">
+                <img src="<?= base_url()?>assets/image/bgwarna.png" style="position: absolute;
+width: 444px;
+height: 453px;
+left: -76px;
+top: 278px;">
+                <img src="<?= base_url()?>assets/image/bungabawah.png" style="display: block; margin: auto; margin-top: 331px;">
+               
+
+            </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
