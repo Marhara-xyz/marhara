@@ -22,19 +22,11 @@
             </div>
         </div>
 
-        <div class="hlmn" style=" ">
-            <div class="konten">
+        <div class="hlmn" style="background-image: url('<?= base_url()?>assets/image/bgwarna.png;');">
                 <img src="<?= base_url()?>assets/image/bungaatas.png" style="display: block;margin: auto;">
                 <img src="<?= base_url()?>assets/image/bungakanan.png" style="position: absolute; right: 0; top: 149px;">
                 <img src="<?= base_url()?>assets/image/bungakiri.png" style="position:absolute;left: 0;bottom: 149px;">
-                <img src="<?= base_url()?>assets/image/bgwarna.png" style="position: absolute;
-width: 444px;
-height: 453px;
-left: -76px;
-top: 278px;">
                 <img src="<?= base_url()?>assets/image/bungabawah.png" style="display: block; margin: auto; margin-top: 331px;">
-               
-
             </div>
         </div>
     </div>
