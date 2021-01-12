@@ -12,23 +12,16 @@
     <title>couple name</title>
   </head>
   <body>
-    <div id="container">
-        <div class="hlmn">
-            <div class="container">
-                <img src="<?= base_url()?>assets/image/bungaatas.png" >
-                <img src="<?= base_url()?>assets/image/bungakanan.png">
-                <img src="<?= base_url()?>assets/image/bungakiri.png">
-                <img class="bottom" src="<?= base_url()?>assets/image/bungabawah.png">
-            </div>
-        </div>
+    <div id="konten">
+        <div id="about" style="min-height: 640px">
+            <img src="<?= base_url()?>assets/image/bungaatas.png" style="position: absolute;transform: translate(-50%); left: 50%; top: -60px">
+            <h3 style="position: absolute; transform: translate(-50%); left: 50%; top: 50px">about us</h3>
+            <h2 style="position: absolute; transform: translate(-50%); left: 50%; top: 80px">the bridge and groom</h2>
+            <img src="<?= base_url()?>assets/image/bungakanan.png" style="position: absolute; right: 0; top: 148px">
+            <img src="<?= base_url()?>assets/image/bungakiri.png" style="position: absolute; left: 0; top: 400px">
+            <img src="<?= base_url()?>assets/image/bungabawah.png" style="position: absolute; transform: translate(-50%); left: 50%; bottom: -80px">
+        </div><br><br><br>
 
-        <div class="hlmn" style="background-image: url('<?= base_url()?>assets/image/bgwarna.png;');">
-                <img src="<?= base_url()?>assets/image/bungaatas.png" style="display: block;margin: auto;">
-                <img src="<?= base_url()?>assets/image/bungakanan.png" style="position: absolute; right: 0; top: 149px;">
-                <img src="<?= base_url()?>assets/image/bungakiri.png" style="position:absolute;left: 0;bottom: 149px;">
-                <img src="<?= base_url()?>assets/image/bungabawah.png" style="display: block; margin: auto; margin-top: 331px;">
-            </div>
-        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
