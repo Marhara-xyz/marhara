@@ -8,22 +8,19 @@ html, body {
     padding-bottom: 50px;
 }
 
-/*.swiper-slide {
+.swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
     height: 300px;
-}*/
-
-h1 {
-  color: orange;
 }
-/*h1 {
-  color: orange;
+
+h1{
+  color: #396;
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
-}*/
+}
 
 #clockdiv{
   font-family: sans-serif;
@@ -52,6 +49,27 @@ h1 {
   padding-top: 5px;
   font-size: 16px;
 }
-.kontol{
-  color:red;
+
+.element-form {
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pilihan {
+  display: inline-block;
+}
+
+.pilihan label {
+  font-weight: normal
+}
+
+.element-form span input[type="text"], .element-form span textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
 }
