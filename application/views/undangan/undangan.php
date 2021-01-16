@@ -82,30 +82,31 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1175483303145!2d106.82756731347143!3d-6.378824395384294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec0869e31b4f%3A0xaa40278d69385917!2sHotel%20Bumi%20Wiyata!5e0!3m2!1sen!2sid!4v1610653900642!5m2!1sen!2sid" width="264" height="264" frameborder="0" style="border:0; position: absolute; transform: translate(-50%); left: 50%; top: 220px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
 
+
         <div id="rsvp" style="position: relative; height: 640px; overflow: hidden;">
-            <form style="position: absolute; transform: translate(-50%); left: 50%; z-index: 2; top: 100px">
+            <form method="post" action="javascript:kirim();" style="position: absolute; transform: translate(-50%); left: 50%; z-index: 2; top: 100px">
 
                 <div class="element-form">
                 <label>Nama</label><br>
-                <span class="field" input type="text" name="nama" /></span>
+                <span class="field"><input type="text" id="nama_tamu" name="nama_tamu" ></span>
                 </div>
             
 
                 <div class="element-form">
                     <label>Alamat</label><br>
-                    <span class="field"><textarea name="alamat"></textarea></span>
+                    <span class="field"><textarea id="alamat" name="alamat"></textarea></span>
                 </div>
 
                 <div class="pilihan">
-                    <input type="radio" id="ya" name="keterangan" value="1">
+                    <input type="radio" id="ya" name="keterangan" value="Datang" checked>
                     <label for="ya">Pasti</label><br>
                 </div>
                 <div class="pilihan">
-                    <input type="radio" id="tidak" name="keterangan" value="2">
+                    <input type="radio" id="tidak" name="keterangan" value="Tidak">
                     <label for="tidak">Kaga Dah</label><br>
                 </div>
                 <div class="pilihan">
-                    <input type="radio" id="mungkin" name="keterangan" value="3">
+                    <input type="radio" id="mungkin" name="keterangan" value="Ragu">
                     <label for="mungkin">Maybe Yes Maybe No</label><br>
                 </div>
 
@@ -115,9 +116,15 @@
                 </div>
 
                 <div class="element-form">
-                    <span class="fiel"><input type="submit" /></span>
+                    <button class="btn"  type="submit"  name="btnkirim"/>Kirim</button>
                 </div>
             </form>
+            <div class="pesannya">
+              
+            </div>
+            <div class="tabelnya">
+
+            </div>
         </div>
 
     </div>
@@ -126,6 +133,7 @@
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -179,6 +187,108 @@
           }
         }, 1000);
     </script>
+
+  <script type="text/JavaScript">
+     function pesannya(alert='', pesan='')
+     {
+      $('.pesannya').html('\
+                <div class="alert '+alert+'">\
+                <span class="closebtn" onclick="this.parentElement.style.display=\'none\'">&times;</span>\
+                '+pesan+'\
+              </div>');
+     }
+    function disabled_(stt)
+     {
+      $("form input , textarea").prop("disabled", stt);
+     }
+     reload_table();     
+      function reload_table()
+     {
+        tabelnya = $('.tabelnya');
+        $.ajax({
+            type:"GET",
+            url : "<?= base_url('order/undangan/ucapan')  ?>",
+            beforSend : function(){
+              btnkirim.html('Menampilkan . . .');
+            },
+            success : function(data){
+              
+              tabelnya.html(data);
+            },
+              error:function(){
+                tabelnya.html('Error!');
+              }
+
+          });
+
+     }
+     function kirim()
+     {
+          $('.pesannya').html('');
+          nama_tamu = $('[name = "nama_tamu"]');
+          if (nama_tamu.val()==''){
+            pesannya('warning','Nama Wajib diisi!');
+            nama_tamu.focus();
+            return false;
+         }
+          alamat = $('[name = "alamat"]');
+          if (alamat.val()==''){
+            pesannya('warning','Alamat Wajib diisi!');
+            alamat.focus();
+            return false;
+         }
+         keterangan = $("input[name='keterangan']:checked");
+          if (keterangan.val() == ''){
+            pesannya('warning','Keterangan Wajib diisi!');
+            return false;
+          }
+          ucapan = $('[name = "ucapan"]');
+          if (ucapan.val()==''){
+            pesannya('warning','Ucapan Wajib diisi!');
+            ucapan.focus();
+            return false;
+          }
+          disabled_(true);
+
+          btnkirim = $('[name="btnkirim]');
+          var fd = new FormData();
+            fd.append('nama_tamu', nama_tamu.val());
+            fd.append('alamat', alamat.val());
+            fd.append('keterangan', keterangan.val());
+            fd.append('ucapan', ucapan.val()); 
+          $.ajax({
+            type:"POST",
+            url : "<?= base_url('order/undangan/kirim')  ?>",
+            data : fd,
+            dataType : "json",
+            processData : false,
+            contentType : false,
+            beforSend : function(){
+              btnkirim.html('Mengirim . . .');
+            },
+            success : function(data){
+              disabled_(false);
+              btnkirim.html('Kirim');
+              if(data.stt==1){
+                reload_table();
+                nama_tamu.val('');
+                alamat.val('');
+                ucapan.val('');
+                pesannya('success', data.pesan);
+              }else{
+                pesannya('warning', data.pesan);
+              }
+            },
+              error:function(){
+                disabled_(false);
+                btnkirim.html('Kirim');
+                pesannya('danger', 'Silahkan Coba Lagi! . . .');
+              }
+
+          });
+      }
+    
+  </script>
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
